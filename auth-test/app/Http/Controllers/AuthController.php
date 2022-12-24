@@ -18,8 +18,8 @@ class AuthController extends Controller
         ]);
         // return $credentials;
         if(Auth::attempt($credentials)){
-            return redirect()->intended('home');
+            return redirect()->intended('/');
         }
-        return "false";
+        return back();
     }
 }
